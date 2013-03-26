@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DOMEventBridge</title>
+</head>
+<body>
+
+<h1>DOMEventBridge</h1>
+
+<p id="p1">Now is the <a rel="dombridge nav" href="http://time.com">time</a> for all good men to come to the aid of their country. <input type="button" value="yes" rel="dombridge popup" data-val="woot!"></p>
+<p id="p2">A deferred <input type="button" value="button" rel="dombridge popup" data-val="later!"></p>
+
+<!-- example "tracking" element in page DOM -->
+<div style="display:none" rel="dombridge tracking" data-val="super"></div>
+
+
+
+<!-- DOMEventBridge code -->
+<script src="../lib/eventhub.js"></script>
+<script src="../lib/dombridge.js"></script>
+
+<!-- custom tracking event: uses jQuery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="trackingelementevent.js"></script>
+
+<!-- example usage script -->
+<script src="test.js"></script>
+
+</body>
+</html>
