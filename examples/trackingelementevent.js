@@ -10,9 +10,9 @@
 	global.EventHub.preserve("dombridge:tracking");
 
 	// search the DOM, once it's ready, for any "tracking" elements
-	global.EventHub.once("dombridge:dom-ready",function(){
+	global.EventHub.DOMBridge.events.on("dom-ready",function(){
 		$("[rel*='dombridge']").filter("[rel*='tracking']").each(function(){
-			global.EventHub.emit("dombridge:tracking",$(this),"tracking");
+			global.EventHub.emit("dombridge:tracking",this,"tracking");
 		});
 	});
 })(window,jQuery);
